@@ -2,12 +2,127 @@
 
 @import "_variables";
 @import "modules/hello.scss";
+@import "modules/navigation.scss";
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+  min-height: 70px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
 
 body {
-  background: $wtf;
+  display: block;
+  margin: auto;
+  max-width: 1000px;
+  background-size: 100%;
+  background: rgb(23, 14, 85);
+  background: linear-gradient(
+    63deg,
+    rgba(23, 14, 85, 1) 16%,
+    rgba(36, 83, 149, 1) 79%,
+    rgba(133, 69, 175, 1) 100%
+  );
+  background-repeat: no-repeat;
+}
+
+.main {
+  max-width: 1000px;
+  margin: 60px auto 0;
+}
+
+.main-header {
+  color: #d62828;
+  display: block;
+  text-align: center;
+  margin: 60px auto 16px;
+}
+
+.section {
+  margin: 10px;
+  padding: 10px;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+
+  &__header {
+    color: #fcbf49;
+    margin: 20px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #a511c0;
+      margin-right: 6px;
+    }
+  }
+
+  &__description {
+    color: #fff;
+  }
+
+  &--grid {
+    display: block;
+    text-align: center;
+  }
+}
+
+.footer {
+  color: #fff;
+  margin: 8px;
+
+  &__link {
+    color: #fff;
+  }
+}
+
+#ciekawostka {
+  background: #c7860e;
+  border-radius: 10px;
+  border: 3px solid black;
+  padding: 10px;
+}
+.photoMorB {
+  display: block;
+  border-radius: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 100%;
+  padding: 20px;
+}
+
+.galeriaPhoto {
+  display: block;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+.naukaPhoto {
+  display: block;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .section--grid {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    column-gap: 16px;
+    text-align: center;
+  }
 }

@@ -1,153 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <meta name="description" content="Your project description" />
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta
-      property="og:image"
-      content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
-    />
-
-    <!-- uncomment the line below to enable PWA  -->
-    <!-- <link rel="manifest" href="manifest.json" /> -->
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="pwa/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="pwa/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="pwa/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="pwa/apple-icon-120.png"
-    />
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-2732.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2732-2048.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2388.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2388-1668.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1536-2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-1536.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1125-2436.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2436-1125.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-828-1792.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1792-828.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2208-1242.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-750-1334.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1334-750.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-640-1136.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1136-640.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
+    <title>Document</title>
   </head>
+
   <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
+    <header>
+      <button
+        class="navigation__button navigation__button--js"
+        aria-label="Otwórz menu"
+      >
+        Menu
+      </button>
+      <nav class="navigation navigation--js">
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Strona Główna</a
+        >
+        <a class="navigation__link" href="nauka-html.html">Nauka HTML</a>
+        <a class="navigation__link" href="galeria-ciem.html">Galeria</a>
+        <a class="navigation__link" href="o-mnie.html">O mnie</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1 class="main-header">Czyż ćmy nie są dziwne?</h1>
+
+      <section class="section section--grid">
+        <div>
+          <h2 class="section__header">Ćmy, motyle nocne (Heterocera)</h2>
+          <p class="section__description">
+            Grupa motyli z reguły prowadząca nocny tryb życia. Trudno
+            jednoznacznie wskazać różnice pomiędzy motylami dziennymi i ćmami.
+            Podział taki, choć stosowany również przez specjalistów, nie jest
+            podziałem ściśle naukowym – jest sztuczny i nie odzwierciedla
+            historii ewolucyjnej rzędu motyle (Lepidoptera).
+          </p>
+          <a class="section__description--ciekawostka" href="#ciekawostka"
+            >Sprawdź dlaczego ćmy lecą do światła!</a
+          >
+        </div>
+        <div id="MorB">
+          <img class="photoMorB" src="../assets/img/MorB.jpg" alt="MothOrButterfly" />
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="section__header">
+          Ogólne różnice pomiędzy motylami dziennymi a ćmami
+        </h2>
+        <ul class="section__description">
+          <li>
+            Czułki (antennae) – motyle dzienne mają cienkie, proste czułki
+            zakończone wyraźną buławką. Natomiast czułki ciem zazwyczaj buławki
+            nie mają, poza przedstawicielami kilku rodzin, np. Castniidae
+            (ang.).
+          </li>
+          <li>
+            Samce ciem mają często pierzaste czułki, zwiększające powierzchnię
+            odbierania bodźców chemicznych (feromonów) wysyłanych przez samice.
+            Ta właśnie różnica posłużyła do paranaukowego określenia motyli
+            dziennych jako Rhopalocera (buławkoczułkowe), a ciem jako Heterocera
+            (różnoczułkowe).
+          </li>
+          <li>
+            Skrzydła ciem są zazwyczaj połączone wędzidełkiem (łac. frenulum), u
+            motyli dziennych nie ma takiego połączenia z wyjątkiem gatunku
+            Euschemon rafflesia z rodziny powszelatkowatych.
+          </li>
+          <li>
+            Ogromna większość ciem to gatunki nocne lub aktywne o świcie albo o
+            zmierzchu. Motyle dzienne wykazujące ten typ aktywności są bardzo
+            nieliczne.
+          </li>
+          <li>
+            Poczwarka – ćmy przeważnie tworzą jedwabny kokon dookoła poczwarki,
+            podczas gdy motyle dzienne zwykle tego nie robią.
+          </li>
+          <li>
+            Wiele gatunków motyli dziennych ma jaskrawo ubarwione skrzydła.
+            Skrzydła ciem są często w odcieniach brązu, szarości, bieli lub
+            czerni, często ze skomplikowanymi wzorami służącymi jako kamuflaż.
+            Niemniej jednak liczne dzienne gatunki ciem mają jaskrawe ubarwienie
+            odstraszające, często sygnalizujące ich toksyczność.
+          </li>
+          <li>
+            Ćmy przeważnie odpoczywają ze skrzydłami rozłożonymi na boki lub
+            złożonymi dachówkowato. Motyle dzienne najczęściej składają skrzydła
+            pionowo nad ciałem.
+          </li>
+          <li>
+            Ćmy mają w pełni rozwinięte przednie odnóża, część motyli dziennych
+            ma je zredukowane i brak im końcowych segmentów.
+          </li>
+        </ul>
+        <p>
+          Powyższe różnice nie są kategoryczne – trafiają się wyjątki od nich,
+          np. żywo ubarwione gatunki ciem latające w dzień. Istnieją również
+          gatunki motyli dziennych (np. środkowoafrykański Pseudopontia
+          paradoxa), których czułki pozbawione są buławki typowej dla innych
+          przedstawicieli tej grupy.
+        </p>
+      </section>
+      <section class="section">
+        <h2 class="section__header">Dlaczego ćmy lecą do światła?</h2>
+        <p class="section__description section__description--ciekawostka">
+          Do dziś naukowcy nie są zgodni co do przyczyn tego zjawiska. Jedna z
+          teorii mówi, że ćmy mają ewolucyjnie rozwinięty mechanizm nawigacji w
+          oparciu o światło. Ćmy nie rozróżniają światła księżyca lub gwiazdy od
+          światła emitowanego np. przez żarówkę i usiłują lecieć pod odpowiednim
+          kątem do świecącego obiektu. Obiekt emitujący światło służy ćmom w
+          podobny sposób, jak latarnia morska statkom.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Więcej informacji dostępne na
+        <a
+          class="footer__link"
+          target="_blank"
+          href="https://pl.wikipedia.org/wiki/%C4%86my"
+          >Wikipedii</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
