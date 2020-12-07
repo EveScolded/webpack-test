@@ -4,6 +4,11 @@
 @import "modules/hello.scss";
 @import "modules/navigation.scss";
 
+:root {
+  --background-color: black;
+  --text-color: white;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -76,6 +81,15 @@ body {
     display: block;
     text-align: center;
   }
+}
+
+.section__description--dark {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+ 
+.darkmode__button {
+display: inline-block;
 }
 
 .footer {

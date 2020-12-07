@@ -30,3 +30,20 @@ myButton.addEventListener('click', () => {
     const nav = document.querySelector('.navigation--js');
     nav.classList.toggle('navigation--ON');
 });
+
+let isDark = true;
+
+const darkButton = document.querySelector('.darkmode__button--js');
+
+darkButton.addEventListener('click',() => {
+    debugger;
+    if (isDark == true)  {
+        document.documentElement.style.setProperty('--background-color', 'white');
+        document.documentElement.style.setProperty('--text-color', 'black');
+        isDark = false;
+    } else {
+        document.documentElement.style.setProperty('--background-color', 'black');
+        document.documentElement.style.setProperty('--text-color', 'white');
+        isDark = true;
+    }
+});
