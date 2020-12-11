@@ -1,12 +1,14 @@
 @import "~normalize.css";
 
 @import "_variables";
-@import "modules/hello.scss";
+@import "modules/images.scss";
+@import "modules/sections.scss";
 @import "modules/navigation.scss";
 
 :root {
-  --background-color: black;
-  --text-color: white;
+  --background-color: rgba(12, 13, 14, 50%);
+  --mainHeader-color:  #fcbf49;
+  --timePlaceholder-color: #fff;
 }
 
 html {
@@ -16,6 +18,13 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+.timePlaceholder {
+  color: var(--timePlaceholder-color);
+  display: flex;
+  justify-content: flex-end;
+  padding: 2px 6px;
 }
 
 header {
@@ -29,67 +38,52 @@ header {
 body {
   display: block;
   margin: auto;
-  max-width: 1000px;
-  background-size: 100%;
-  background: rgb(23, 14, 85);
-  background: linear-gradient(
-    63deg,
-    rgba(23, 14, 85, 1) 16%,
-    rgba(36, 83, 149, 1) 79%,
-    rgba(133, 69, 175, 1) 100%
-  );
-  background-repeat: no-repeat;
+  background-image: url("../assets/img/trees.jpg");
+  background-repeat: space;
+  background-attachment: fixed;
 }
 
 .main {
   max-width: 1000px;
   margin: 60px auto 0;
+  background-color: var(--background-color);
+  border-radius: 16px;
 }
 
 .main-header {
-  color: #d628d6;
+  color: var(--mainHeader-color);
   display: block;
   text-align: center;
-  margin: 60px auto 16px;
+  margin: 16px auto 16px;
+  padding-top: 10px;
 }
 
-.section {
-  margin: 10px;
-  padding: 10px;
-  color: #fff;
+.lightmode__button {
+  box-shadow: 3px 4px 0px 0px #899599;
+  background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+  background-color: #ededed;
+  border-radius: 15px;
+  border: 1px solid #d6bcd6;
+  display: flex;
+  position: fixed;
+  bottom:8px;
+  right:8px;
+  cursor: pointer;
+  color: #000000;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 7px 25px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #e1e2ed;
 
-  &__header {
-    color: #fcbf49;
-    margin: 20px;
-
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background-color: #a511c0;
-      margin-right: 6px;
-    }
+  &:hover {
+    background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+    background-color: #bab1ba;
   }
 
-  &__description {
-    color: #fff;
+  @media (min-width: 768px) {
+    bottom:8px;
   }
-
-  &--grid {
-    display: block;
-    text-align: center;
-  }
-}
-
-.section__description--dark {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
- 
-.darkmode__button {
-display: inline-block;
 }
 
 .footer {
@@ -106,37 +100,4 @@ display: inline-block;
   border-radius: 10px;
   border: 3px solid black;
   padding: 10px;
-}
-.photoMorB {
-  display: block;
-  border-radius: 30%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  max-width: 100%;
-  padding: 20px;
-}
-
-.galeriaPhoto {
-  display: block;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 100%;
-}
-
-.naukaPhoto {
-  display: block;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .section--grid {
-    display: grid;
-    grid-template: 1fr / 1fr 1fr;
-    column-gap: 16px;
-    text-align: center;
-  }
 }

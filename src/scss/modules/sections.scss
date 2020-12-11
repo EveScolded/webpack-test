@@ -1,0 +1,35 @@
+:root {
+  --section-color: #fff;
+  --sectionHeader-color: #fcbf49; 
+}
+
+.section {
+  margin: 10px;
+  padding: 10px;
+  color: var(--section-color);
+
+  &__header {
+    color: var(--sectionHeader-color);
+    margin: 20px;
+  }
+
+  &__description {
+    &--dark {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+  }
+
+  &--grid {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template: 1fr / 1fr 1fr;
+      column-gap: 16px;
+    }
+  }
+}
+
+.external-link {
+  color: rgb(175, 70, 175);
+  text-decoration: none;
+}

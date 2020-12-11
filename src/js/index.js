@@ -1,49 +1,79 @@
-import '../scss/main.scss';
+import "../scss/main.scss";
 
-import moment from 'moment';
+import moment from "moment";
 
 // uncomment the lines below to enable PWA
 // import {registerSW} from './pwa.js';
 // registerSW();
 
-/* place your code below */
+function testowa(Fname, Fage) {
+  console.log(
+    `Nazywam się ${Fname} i mam ${Fage} lat. Witam w moim frontendowym placu zabaw :)`
+  );
+}
+testowa("Ewelina", 28);
 
-console.log('HELLO 🚀');
-var x = moment(new Date);
-console.log();
-const name = 'Ewka';
-const age = 27;
+// wyświetlanie daty i godziny
 
-console.log(name);
-console.log(age);
-console.log(`Nazywam się ${name} i mam ${age} lat.`)
+function setTime() {
+  moment.locale("pl");
+  const time = moment().format("LLLL");
+  const timePlaceholder = document.querySelector(".timePlaceholder--js");
+  timePlaceholder.innerHTML = time;
+  setTimeout(setTime, 100);
+} 
 
+setTime();
 
-function testowa (Fname,Fage)
-{console.log (`Mam na imię ${Fname} i mam ${Fage} lat.`);}
+// Hamburger menu
 
-testowa("Ewka",25);
+const myButton = document.querySelector(".navigation__button--js");
 
-const myButton = document.querySelector('.navigation__button--js');
-
-myButton.addEventListener('click', () => {
-    const nav = document.querySelector('.navigation--js');
-    nav.classList.toggle('navigation--ON');
+myButton.addEventListener("click", () => {
+  const nav = document.querySelector(".navigation--js");
+  nav.classList.toggle("navigation--ON");
 });
+
+// Light mode
 
 let isDark = true;
 
-const darkButton = document.querySelector('.darkmode__button--js');
+const lightButton = document.querySelector(".lightmode__button--js");
 
-darkButton.addEventListener('click',() => {
-    debugger;
-    if (isDark == true)  {
-        document.documentElement.style.setProperty('--background-color', 'white');
-        document.documentElement.style.setProperty('--text-color', 'black');
-        isDark = false;
-    } else {
-        document.documentElement.style.setProperty('--background-color', 'black');
-        document.documentElement.style.setProperty('--text-color', 'white');
-        isDark = true;
-    }
+lightButton.addEventListener("click", () => {
+  if (isDark == true) {
+    document.documentElement.style.setProperty(
+      "--background-color",
+      "rgba(208, 211, 214, 0.9)"
+    );
+    document.documentElement.style.setProperty("--section-color", "black");
+    document.documentElement.style.setProperty(
+      "--sectionHeader-color",
+      "#d01919"
+    );
+    document.documentElement.style.setProperty("--mainHeader-color", "#d01919");
+    document.documentElement.style.setProperty(
+      "--timePlaceholder-color",
+      "#000000"
+    );
+    isDark = false;
+    lightButton.innerHTML = "Dark mode";
+  } else {
+    document.documentElement.style.setProperty(
+      "--background-color",
+      "rgba(12, 13, 14, 50%)"
+    );
+    document.documentElement.style.setProperty("--section-color", "#fff");
+    document.documentElement.style.setProperty(
+      "--sectionHeader-color",
+      "#fcbf49"
+    );
+    document.documentElement.style.setProperty("--mainHeader-color", "#fcbf49");
+    document.documentElement.style.setProperty(
+      "--timePlaceholder-color",
+      "#fff"
+    );
+    isDark = true;
+    lightButton.innerHTML = "Light mode";
+  }
 });
