@@ -1,3 +1,11 @@
+@keyframes shake {
+  from {
+    transform: rotate(-6deg);
+  }
+  to {
+    transform: rotate(6deg);
+  }
+}
 
 .slap-photo {
   display: flex;
@@ -13,6 +21,9 @@
   margin-top: 10px;
   max-width: 100%;
   padding: 20px;
+  &:hover {
+    animation: shake 0.09s infinite alternate;
+  }
 }
 
 .galeriaPhoto {
