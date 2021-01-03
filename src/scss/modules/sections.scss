@@ -1,6 +1,6 @@
 :root {
   --section-color: #fff;
-  --sectionHeader-color: #fcbf49; 
+  --sectionHeader-color: #fcbf49;
 }
 
 .section {
@@ -18,6 +18,9 @@
       background-color: var(--background-color);
       color: var(--text-color);
     }
+    &--ciekawostka {
+      color:rgb(89, 148, 236);
+    }
   }
 
   &--grid {
@@ -27,9 +30,22 @@
       column-gap: 16px;
     }
   }
+
+  &__repo-list {
+    border: solid 1px #fcc049c4;
+    border-radius: 16px;
+    padding: 16px;
+    list-style-type: none;
+    margin: 0 40px 10px 0;
+  }
+
+  &__repo-links {
+    color: rgb(89, 148, 236);
+    text-decoration: none;
+  }
 }
 
 .external-link {
-  color: rgb(175, 104, 175);
+  color: rgb(89, 148, 236);
   text-decoration: none;
 }
