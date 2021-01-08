@@ -6,7 +6,10 @@ fetch(
   .then((resp) => resp.json())
   .then((resp) => {
     for (let repo of resp) {
-      const { name, html_url } = repo;
+      const { name, html_url, fork } = repo;
+      if (fork) {
+        continue
+      }
       const repoList = document.querySelector(".section__repo--js");
 
       const myTemplate = 
