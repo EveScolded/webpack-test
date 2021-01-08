@@ -1,4 +1,9 @@
 ![cover](./src/assets/img/cover.jpg)
+
+# WTF Homepage 
+
+Website created to practise basic elements of frontend development.
+
 ## Project contains:
 
 * basic HTML tags 
