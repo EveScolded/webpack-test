@@ -1,9 +1,4 @@
 ![cover](./src/assets/img/cover.jpg)
-
-# WTF Homepage 
-
-Simple, webpack based website, created as a part of "WTF: Co ten frontend" training course.
-
 ## Project contains:
 
 * basic HTML tags 
