@@ -7,16 +7,13 @@ Simple, webpack based website, created as a part of "WTF: Co ten frontend" train
 ## Project contains:
 
 * basic HTML tags 
-* CSS elements like display: grid or animation,
-* 
+* CSS styles e.g. grid or animations,
+* JS function to display date and time, hamburger menu and dark/light mode switch,
+* list of repositories downloaded using API.
 
-# WTF Webpack Starter Kit 
+## WTF Webpack Starter Kit 
 
-Simple toolkit for your static websites development.
-
-## How to use it?
-
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
+Toolkit for static websites development from WTF training course.
 
 ### Available scripts
 
